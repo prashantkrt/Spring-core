@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <!-- Dependent class -->
+    <bean id ="bd" class="com.beans.BlueDart"></bean>   <!--dependent class objects first  -->
+    <bean id="ff" class="com.beans.FirstFlight"></bean> <!--dependent class objects first  -->
+    <bean id="fe" class="com.beans.FedEx"></bean>       <!--dependent class objects first  -->
+    
+    <!-- Target class -->
+    <!-- Target class objects end  -->    
+    <bean id="amazon" class="com.beans.Amazon">
+    <!-- Setter injection -->
+    <!-- Setting setter name as deliveryService as property passed into the setter method of Amazon 
+    and setting the FebEx reference  -->
+    <property ref="fe" name="service"></property> 
+    <!--constructor -->
+    <constructor-arg ref="bd" name="service"></constructor-arg>
+    </bean> 
+
+</beans>
