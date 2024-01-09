@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="employee1" class="com.beans.Employee">
+    <constructor-arg value="121"></constructor-arg>
+    <constructor-arg value="Rakesh"></constructor-arg>
+    <constructor-arg value="Gurgaon"></constructor-arg>
+    <constructor-arg value="34000f"></constructor-arg>    
+    </bean>
+    
+    <bean id="employee2" class="com.beans.Employee">    
+    <constructor-arg index ="1" value="Dhruv"></constructor-arg>
+    <constructor-arg index="0" value="134"></constructor-arg>    
+    <constructor-arg index="3" value="44000f"></constructor-arg> 
+    <constructor-arg index="2" value="Delhi"></constructor-arg>   
+    </bean>
+    
+    <bean id="employee3" class="com.beans.Employee">    
+    <constructor-arg name="name" value="Mayank"></constructor-arg>
+    <constructor-arg name="id" value="634"></constructor-arg>    
+    <constructor-arg name="salary" value="14000f"></constructor-arg> 
+    <constructor-arg name="city" value="Dehradun"></constructor-arg>   
+    </bean>
+    
+    <bean id="employee4" class="com.beans.Employee">    
+    <constructor-arg index="1" type="java.lang.String" value="Satish"></constructor-arg>
+    <constructor-arg index="0" type="java.lang.Integer" value="994"></constructor-arg>    
+    <constructor-arg index="3" type="java.lang.Float" value="24000f"></constructor-arg> 
+    <constructor-arg index="2" type="java.lang.String" value="Patna"></constructor-arg>   
+    </bean>
+    
+    <bean id="employee5" class="com.beans.Employee">    
+    <constructor-arg name="name" type="java.lang.String" value="Pritesg"></constructor-arg>
+    <constructor-arg name="id" type="java.lang.Integer" value="294"></constructor-arg>    
+    <constructor-arg name="salary" type="java.lang.Float" value="28000f"></constructor-arg> 
+    <constructor-arg name="city" type="java.lang.String" value="Gaziabad"></constructor-arg>   
+    </bean>
+
+</beans>
