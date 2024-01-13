@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">        
+
+  
+   <bean id="ff" class="com.beans.FirstFlight"></bean>
+   <bean id="fd" class="com.beans.FedEx" ></bean>
+   <bean id="bd" class="com.beans.BlueDart"></bean>
+   
+   <bean id="amazon" class="com.beans.Amazon"></bean>
+   
+   <context:annotation-config></context:annotation-config>   
+
+</beans>
