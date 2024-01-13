@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="alpha1" class="com.beans.Alpha">
+    <property ref="beta1" name="beta"></property>   
+    </bean>   
+    
+    <bean id="beta1" class="com.beans.Beta">
+    <property ref="alpha1" name="alpha"></property>       
+    </bean>   
+    
+    <!--will not work as contructor will load during class object creation  -->
+    
+    <!--<bean id="alpha1" class="com.beans.Alpha">  
+    <constructor-arg ref="beta1" name="beta"></constructor-arg>   
+    </bean>   
+    <bean id="beta1" class="com.beans.Beta">  
+     <constructor-arg ref="alpha1" name="alpha"></constructor-arg>      
+    </bean> -->  
+
+</beans>
