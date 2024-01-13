@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="firstFlight" class="com.beans.FirstFlight"></bean> -->
+  <!--  <bean id="blueDart" class="com.beans.BlueDart"  primary="true"></bean>  -->
+<!--    <bean id="blueDart" class="com.beans.BlueDart"></bean>  -->
+<!--    <bean id="service" class="com.beans.FedEx"></bean>   -->
+  <!--  <bean id="fedEx" class="com.beans.FedEx"></bean>  
+     -->
+   <!-- <bean id="amazon" class="com.beans.Amazon"> 
+   <property ref="blueDart" name="service"></property>  
+   </bean> -->
+   
+  <!--  <bean id="amazon" class="com.beans.Amazon" autowire="byType"></bean> -->
+  <!--  <bean id="amazon" class="com.beans.Amazon" autowire="byName"></bean> -->
+   <!-- <bean id="amazon" class="com.beans.Amazon" autowire="constructor"></bean> -->
+   
+   
+   <bean id="firstFlight" class="com.beans.FirstFlight" autowire-candidate="false"></bean>
+   <bean id="blueDart" class="com.beans.BlueDart" autowire-candidate="false"></bean>   
+   <bean id="fedEx" class="com.beans.FedEx"></bean> 
+   
+   
+   <!-- <bean id="amazon" class="com.beans.Amazon" autowire="byType"></bean> -->
+  <bean id="amazon" class="com.beans.Amazon" autowire="no">
+  <!-- manually -->
+  <property  ref="blueDart" name="service"></property>
+  </bean>
+
+</beans>
