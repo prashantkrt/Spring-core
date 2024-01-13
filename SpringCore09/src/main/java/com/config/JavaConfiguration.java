@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class JavaConfiguration {
 
 	public JavaConfiguration() {
-		System.out.println("JavaConfiguration instantiated");
+		System.out.println("JavaConfiguration instantiated by spring");
 	}
 
 	@Bean // for managing by Spring
